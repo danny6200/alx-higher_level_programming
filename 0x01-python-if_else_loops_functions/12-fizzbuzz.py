@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    for i in range(100):
+    for i in range(1, 100):
         if i % 15 == 0:
             print('FizzBuzz', end=" ")
         elif i % 5 == 0:
@@ -8,4 +8,4 @@ def fizzbuzz():
         elif i % 3 == 0:
             print("Fizz", end=" ")
         else:
-            print(f"{i}", end=" " if i < 99 else "\n")
+            print("{}".format(i), end=" " if i < 99 else "\n")
