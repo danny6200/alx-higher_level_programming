@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-import importlib
-import sys
+if __name__ == "__main__":
+    import importlib
+    import sys
 
-module = importlib.import_module("hidden_4")
+    mod = importlib.import_module("hidden_4")
 
-module_names = dir(module)
+    mod_names = dir(mod)
 
-filtered_names = sorted(name for name in module_names if not name.startswith('__'))
+    f_names = sorted(name for name in mod_names if not name.startswith('__'))
 
-for name in filtered_names:
-    print(name)
+    for name in f_names:
+        print(name)
