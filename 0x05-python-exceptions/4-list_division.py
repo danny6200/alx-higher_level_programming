@@ -6,12 +6,14 @@ def list_division(my_list_1, my_list_2, list_length):
             try:
                 num1 = my_list_1[i]
                 num2 = my_list_2[i]
+                is_num1 = isinstance(num1, (int, float))
+                is_num2 = isinstance(num2, (int, float))
 
-                if (isinstance(num1, (int, float)) and isinstance(num2, (int, float))) and num2 != 0:
+                if (is_num1 and is_num2) and num2 != 0:
                     division_result = num1 / num2
                 else:
                     division_result = 0
-                    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
+                    if not is_num1 or not is_num2:
                         print("wrong type")
                     if num2 == 0:
                         print("division by 0")
