@@ -54,7 +54,7 @@ class Square:
 
         retrieve the position of a square
         '''
-        return self.__position = position
+        return self.__position
 
     @position.setter
     def position(self, value):
