@@ -16,4 +16,4 @@ class Square:
         method2(args): Description of method2.
     '''
     def __init__(self, size):
-        self.__size = 3
+        self.__size = size
