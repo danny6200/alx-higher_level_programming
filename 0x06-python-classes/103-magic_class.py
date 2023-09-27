@@ -22,7 +22,7 @@ class MagicClass:
         the circumference of a circle
     '''
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         '''
         This is the circle class contructor
 
