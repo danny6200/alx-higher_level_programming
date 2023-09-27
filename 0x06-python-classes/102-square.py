@@ -97,5 +97,5 @@ class Square:
         This checks if the self square instance
         is less than or equal to the other square
         instance
-	'''
+        '''
         return self.area() <= other.area()
