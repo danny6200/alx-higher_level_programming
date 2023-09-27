@@ -90,7 +90,8 @@ class Square:
     def __str__(self):
         result = ""
         if self.__size == 0:
-            print()
+            result += "\n"
+            return result
         else:
             for _ in range(self.__position[1]):
                 print()
