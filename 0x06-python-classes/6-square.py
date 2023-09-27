@@ -63,7 +63,7 @@ class Square:
            position
         '''
         is_tuple = isinstance(value, tuple)
-	is_int = isinstance(x, int)
+        is_int = isinstance(x, int)
         ln = len(value)
         if not is_tuple or ln != 2 or \
            not all(is_int and x >= 0 for x in value):
