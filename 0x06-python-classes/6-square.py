@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
 '''This is amodule-level docstring'''
+
+
 class Square:
     '''This is a docstring for the Square class.
 
-    This docstring provides an overview of what the class does and any important information
+    This docstring provides an overview of what
+    the class does and any important information
     about its usage, attributes, and methods.
 
     Attributes:
@@ -15,20 +18,18 @@ class Square:
         method1(args): Description of method1.
         method2(args): Description of method2.
     '''
-    
+
     def __init__(self, size=0, position=(0, 0)):
         '''This is the constructor of the Square class
-
-	It instantiates an object of the Square class
-	with an attribute of size
+        It instantiates an object of the Square class
+        with an attribute of size
         '''
         self.__size = size
         self.__position = position
-    
+
     @property
     def size(self):
         '''This is a property getter function for the
-   
         the private instance attribute size
         '''
         return self.__size
@@ -63,20 +64,16 @@ class Square:
            position
         '''
         is_tuple = isinstance(value, tuple)
-        is_int = isinstance(x, int)
+        is_pos_int = all(isinstance(x, int) and x >= 0 for x in value)
         ln = len(value)
-        if not is_tuple or ln != 2 or \
-           not all(is_int and x >= 0 for x in value):
+        if not is_tuple or ln != 2 or not is_pos_int:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-   
 
     def area(self):
         '''This is a docstring for the area method
-
-	It computes the area of a square of the given size
-
-	'''
+        It computes the area of a square of the given size
+        '''
         return self.__size ** 2
 
     def my_print(self):
