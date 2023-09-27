@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
 '''This is amodule-level docstring'''
+
+
 class Square:
     '''This is a docstring for the Square class.
 
-    This docstring provides an overview of what the class does and any important information
+    This docstring provides an overview of what the
+    class does and any important information
     about its usage, attributes, and methods.
 
     Attributes:
