@@ -1,0 +1,43 @@
+Testfile for print_square function.
+=================================
+
+Using print_square function
+--------------------------
+# 1. Importing the print_square function
+>>> print_square = __import__('4-print_square').print_square
+
+# 2. Test to print a square of length 5
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+# 3. Passing a non-integer type as size
+>>> try:
+...     print_square("12")
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# 4. Passing a negative integer as size
+>>> try:
+...     print_square(-10)
+... except ValueError as e:
+...     print(e)
+size must be >= 0
+
+# 5. Passing a float less than 0 as size
+>>> try:
+...     print_square(-4.5)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# 6. Passing no argument at all
+>>> try:
+...     print_square()
+... except TypeError as e:
+...     print(e)
+print_square() missing 1 required positional argument: 'size'
