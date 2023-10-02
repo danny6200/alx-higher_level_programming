@@ -1,0 +1,41 @@
+Testfile for text_indentation function.
+=================================
+
+Using text_indentation function
+--------------------------
+# 1. Importing the text_indentation function
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# 2. Passing a string having the wanted characters
+>>> text = "She is beautiful inside out. I love her so much. Who on earth can stand her charming eyes and smacking lips? O, fairest of all women let me have you all through the night. Let thy thighs rest on mine and my heart shall bless thee."
+>>> text_indentation(text)
+She is beautiful inside out
+<BLANKLINE>
+I love her so much
+<BLANKLINE>
+Who on earth can stand her charming eyes and smacking lips
+<BLANKLINE>
+O, fairest of all women let me have you all through the night
+<BLANKLINE>
+Let thy thighs rest on mine and my heart shall bless thee
+<BLANKLINE>
+<BLANKLINE>
+
+# 3. Passing a non-string type as text
+>>> try:
+...     text_indentation(12)
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+# 4. Passing a string not having the wanted characters
+>>> text = "He caressed her so badly that they ended up spending the night together"
+>>> text_indentation(text)
+He caressed her so badly that they ended up spending the night together
+
+# 5. Passing no argument at all
+>>> try:
+...     text_indentation()
+... except TypeError as e:
+...     print(e)
+text_indentation() missing 1 required positional argument: 'text'
