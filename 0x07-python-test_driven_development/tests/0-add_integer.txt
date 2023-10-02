@@ -3,31 +3,42 @@ Testfile for add_integer function.
 
 Using add_integer function
 --------------------------
+# Importing the add_integer function
 >>> add_integer = __import__("0-add_integer").add_integer
 
+# Test for default value of b
 >>> print(add_integer(1))
 99
 
+# Test for addition of two positive integers
 >>> print(add_integer(12, 23))
 35
 
+# Test for addition of floating numbers
 >>> print(add_integer(12.56, 77.89))
 89
 
+# Attempting to add an inetger and a string
 >>> try:
 ...     print(add_integer(4, "School"))
 ... except TypeError as e:
 ...     print(e)
 b must be an integer
 
+# Attempting to add a string to b's default value
 >>> try:
 ...     print(add_integer("Tech"))
 ... except TypeError as e:
 ...     print(e)
 a must be an integer
 
+# Attempting to add an integer and Nonetype
 >>> try:
 ...     print(add_integer(None))
 ... except TypeError as e:
 ...     print(e)
 a must be an integer
+
+# Test for addition of large numbers
+>>> print(add_integer(10000000000, 9999999999))
+19999999999
