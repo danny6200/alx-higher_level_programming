@@ -1,0 +1,33 @@
+Testfile for add_integer function.
+=================================
+
+Using add_integer function
+--------------------------
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> print(add_integer(1))
+99
+
+>>> print(add_integer(12, 23))
+35
+
+>>> print(add_integer(12.56, 77.89))
+89
+
+>>> try:
+...     print(add_integer(4, "School"))
+... except TypeError as e:
+...     print(e)
+b must be an integer
+
+>>> try:
+...     print(add_integer("Tech"))
+... except TypeError as e:
+...     print(e)
+a must be an integer
+
+>>> try:
+...     print(add_integer(None))
+... except TypeError as e:
+...     print(e)
+a must be an integer
