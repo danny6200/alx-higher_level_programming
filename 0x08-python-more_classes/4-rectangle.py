@@ -112,8 +112,8 @@ class Rectangle:
                 result += "#" * self.__width + "\n"
         return result.rstrip()
 
-    # def __repr__(self):
-    #     """
-    #         This method returns the instance of the class in string format
-    #     """
-    #     return f"<3.rectangle.Rectangle object at {hex(id(self))}>"
+    def __repr__(self):
+        """
+            This method returns the instance of the class in string format
+        """
+        return f"Rectangle({self.__width}, {self.__height})"
