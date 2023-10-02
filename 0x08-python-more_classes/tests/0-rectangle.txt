@@ -1,0 +1,18 @@
+Testfile for rectangle class.
+============================
+
+Using rectangle class function
+--------------------------
+# 1. Importing the rectangle class
+>>> Rectangle = __import__('0-rectangle').Rectangle
+
+# 2. Creating an object off the Rectangle class
+>>> my_rectangle = Rectangle()
+
+# 3. Test to check the type of object created in (1)
+>>> print(type(my_rectangle))
+<class '0-rectangle.Rectangle'>
+
+# 4. Getting the attributes of the created object in a dictionary
+>>> print(my_rectangle.__dict__)
+{}
