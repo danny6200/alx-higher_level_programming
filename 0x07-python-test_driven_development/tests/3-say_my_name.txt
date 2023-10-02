@@ -1,0 +1,39 @@
+Testfile for say_my_name function.
+=================================
+
+Using say_my_name function
+--------------------------
+# 1. Importing the say_my_name function
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# 2. Test for correct display of name
+>>> say_my_name("Bob", "White")
+My name is Bob White
+
+# 3. Attempting to pass a non-string type as first name
+>>> try:
+...     say_my_name(12, "Stone")
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+
+# 4. Attempting to pass a non-string type as last name
+>>> try:
+...     say_my_name("Tunde", 10)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+
+# 5. Passing no value as last name
+>>> try:
+...     say_my_name("Tunde")
+... except Exception as e:
+...     print(e)
+My name is Tunde 
+
+# 5. Passing no argument at all
+>>> try:
+...     say_my_name()
+... except TypeError as e:
+...     print(e)
+say_my_name() missing 1 required positional argument: 'first_name'
