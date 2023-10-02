@@ -1,0 +1,50 @@
+Testfile for rectangle class.
+============================
+
+Using rectangle class
+---------------------
+# 1. Importing the rectangle class
+>>> Rectangle = __import__('1-rectangle').Rectangle
+
+# 2. Creating an object from the Rectangle class via instantiation method
+>>> my_rectangle = Rectangle(2, 4)
+
+# 3. Getting the attributes of the created object in a dictionary
+>>> print(my_rectangle.__dict__)
+{'_Rectangle__width': 2, '_Rectangle__height': 4}
+
+# 4. Testing for proper functionality of setter and getter methods
+>>> my_rectangle.width = 10
+>>> my_rectangle.height = 3
+
+# 5. Getting the attributes of the modified object in a dictionary
+>>> print(my_rectangle.__dict__)
+{'_Rectangle__width': 10, '_Rectangle__height': 3}
+
+# 6. Passing a non-integer value as width
+>>> try:
+...     my_rectangle.width = "b"
+... except TypeError as e:
+...     print(e)
+width must be an integer
+
+# 7. Passing a negative value as width
+>>> try:
+...     my_rectangle.width = -12
+... except ValueError as e:
+...     print(e)
+width must be >= 0
+
+# 8. Passing a non-integer value as height
+>>> try:
+...     my_rectangle.height = "b"
+... except TypeError as e:
+...     print(e)
+height must be an integer
+
+# 9. Passing a negative value as height
+>>> try:
+...     my_rectangle.height = -3
+... except ValueError as e:
+...     print(e)
+height must be >= 0

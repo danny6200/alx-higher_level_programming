@@ -1,8 +1,8 @@
 Testfile for rectangle class.
 ============================
 
-Using rectangle class function
---------------------------
+Using rectangle class
+---------------------
 # 1. Importing the rectangle class
 >>> Rectangle = __import__('0-rectangle').Rectangle
 
