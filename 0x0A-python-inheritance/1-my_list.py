@@ -11,7 +11,7 @@ class MyList(list):
         Attributes:
         -----------
             All atttributes in the list class
-        
+
         Methods:
         --------
             All methods in the list class
@@ -20,8 +20,8 @@ class MyList(list):
     def __init__(self):
         """
             This constructs an instance of the MyList class
-            
-            It does this by accessing the super class 
+
+            It does this by accessing the super class
             constructor method
         """
         super().__init__()
