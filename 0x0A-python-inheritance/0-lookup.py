@@ -6,6 +6,8 @@
     It is used to loop up the methods
     and attributes of an object
 """
+
+
 def lookup(obj):
     """
         This function list the attributes and
