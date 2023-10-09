@@ -1,0 +1,31 @@
+Tests for Mylist Class
+=======================
+
+# Import my_list script
+>>> MyList = __import__("1-my_list").MyList
+
+# Test to check if creation of Mylist instance
+>>> my_list = MyList()
+
+# Test to check appending of integer values into my_list
+>>> my_list.append(1)
+
+# Test to check appending of integer values into my_list
+>>> my_list.append(4)
+
+# Test to check appending of integer values into my_list
+>>> my_list.append(2)
+
+# Test to check appending of integer values into my_list
+>>> my_list.append(3)
+
+# Test to check appending of non-integer values into my_list
+>>> try:
+...     my_list.append("School")
+... except TypeError as e:
+...     print(e)
+value must be an integer
+
+# Test to check the printing of my_list instance
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
