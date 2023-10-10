@@ -1,0 +1,25 @@
+Tests for BaseGeometry Class
+============================
+
+# Import BaseGeometry Class
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+# Test for creation of BaseGeometry instance
+>>> bg = BaseGeometry()
+
+# Test when integer_validator receives expected data types
+>>> bg.integer_validator("width", 24)
+
+#  Test when integer_validator receives unexpected data type
+>>> try:
+...     bg.integer_validator("name", "John")
+... except Exception as e:
+...     print(e)
+name must be an integer
+
+#  Test when integer_validator receives a value less than or equal to zero
+>>> try:
+...     bg.integer_validator("width", -15)
+... except Exception as e:
+...     print(e)
+width must be greater than zero
