@@ -31,7 +31,8 @@ class Student:
         if attrs is None:
             return self.__dict__
         else:
-            return {key: getattr(self, key) for key in attrs if key in dir(self)}
+            return {key: getattr(self, key) for key in attrs
+                    if key in dir(self)}
 
     def reload_from_json(self, json):
         """
