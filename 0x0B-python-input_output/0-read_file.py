@@ -12,7 +12,7 @@ def read_file(filename=""):
     if filename is None:
         return
 
-    with open(filename, "r") as file:
+    with open(filename, "r", encoding="utf-8") as file:
         content = file.read()
 
     print(content)
