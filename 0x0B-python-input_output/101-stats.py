@@ -42,6 +42,7 @@ def main():
                 print("File size: {:d}".format(File_size))
                 for key, value in status_codes.items():
                     print("{:d}: {:d}".format(int(key), value))
+                print()
 
                 File_size = 0
                 status_codes = dict()
