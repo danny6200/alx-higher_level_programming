@@ -28,7 +28,7 @@ class Square(Rectangle):
             This method returns the width value
             of an instance of this class.
         """
-        return super().width
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -39,12 +39,14 @@ class Square(Rectangle):
 
             It sets the width and height attributes.
         """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        elif value < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            super().update(width=value, height=value)
+        # if not isinstance(value, int):
+        #     raise TypeError("width must be an integer")
+        # elif value < 0:
+        #     raise ValueError("width must be >= 0")
+        # else:
+        #     super().update(width=value, height=value)
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """
