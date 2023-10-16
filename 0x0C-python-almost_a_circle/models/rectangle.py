@@ -97,7 +97,7 @@ class Rectangle(Base):
             raise ValueError("x-coordinate must be >= 0")
         else:
             self.__x = value
-    
+
     @property
     def y(self):
         """
@@ -139,7 +139,7 @@ class Rectangle(Base):
             result += "\n"
         else:
             for i in range(self.__y):
-                print() 
+                print()
             for i in range(self.__height):
                 result += " " * self.__x + "#" * self.__width + "\n"
         print(result.rstrip())
@@ -152,8 +152,13 @@ class Rectangle(Base):
             Rectangle class in the format:
             [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
-    
+        id = self.id
+        p_x = self.__x
+        p_y = self.__y
+        w = self.__width
+        h = self.__height
+        return f"[Rectangle] ({id}) {p_x}/{p_y} - {w}/{h}"
+
     def update(self, *args, **kwargs):
         """
             This method uses non-keyworded argument
@@ -175,7 +180,7 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
-    
+
     # TASK 13
     def to_dictionary(self):
         """
