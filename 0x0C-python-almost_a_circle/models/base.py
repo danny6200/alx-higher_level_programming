@@ -14,9 +14,9 @@ import json
 
 class Base:
     """
-        This class will be the “base” of all other classes in this project. 
+        This class will be the “base” of all other classes in this project.
         The goal of it is to manage id attribute in all future
-        classes and to avoid duplicating the same code. 
+        classes and to avoid duplicating the same code.
     """
     __nb_objects = 0
 
@@ -71,11 +71,9 @@ class Base:
         """
         if json_string is None or json_string == "":
             return []
-        
+
         return json.loads(json_string)
 
-    
-    # TASK 18
     @classmethod
     def create(cls, **dictionary):
         """
@@ -86,12 +84,11 @@ class Base:
             dummy_obj = cls(3, 4)
         elif cls.__name__ == "Square":
             dummy_obj = cls(5)
-        
+
         dummy_obj.update(**dictionary)
 
         return dummy_obj
 
-    #TASK 19
     @classmethod
     def load_from_file(cls):
         """
@@ -104,12 +101,12 @@ class Base:
         try:
             with open(filename, "r") as file:
                 json_string = file.read()
-        
+
         except FileNotFoundError:
             return []
-        
+
         dictionaries = cls.from_json_string(json_string)
-        
+
         list_obj = [cls.create(**dt) for dt in dictionaries]
-        
+
         return list_obj
