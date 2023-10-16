@@ -7,6 +7,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
         This class provides the blueprint
@@ -65,14 +66,16 @@ class Square(Rectangle):
             if len(args) == 2:
                 super().update(id=args[0], width=args[1], height=args[1])
             if len(args) == 3:
-                super().update(id=args[0], width=args[1], height=args[1], x=args[2])
+                super().update(id=args[0], width=args[1],
+                               height=args[1], x=args[2])
             if len(args) == 4:
-                super().update(id=args[0], width=args[1], height=args[1], x=args[2], y=args[3])
+                super().update(id=args[0], width=args[1],
+                               height=args[1], x=args[2], y=args[3])
         else:
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
-        
+
     # TASK 14
     def to_dictionary(self):
         """
