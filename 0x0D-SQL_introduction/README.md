@@ -1,0 +1,1 @@
+This project introduces relational databases - mysql specifically.
